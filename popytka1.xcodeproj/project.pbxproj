@@ -16,6 +16,7 @@
 		397431B02B79CB1F009F9BBE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397431AF2B79CB1F009F9BBE /* ProfileViewController.swift */; };
 		397431B22B79D3BB009F9BBE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397431B12B79D3BB009F9BBE /* PostViewController.swift */; };
 		397431B42B79D597009F9BBE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397431B32B79D597009F9BBE /* InfoViewController.swift */; };
+		39E0A72C2B97845F00E78669 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0A72B2B97845F00E78669 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		397431AF2B79CB1F009F9BBE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		397431B12B79D3BB009F9BBE /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		397431B32B79D597009F9BBE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		39E0A72B2B97845F00E78669 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				397431AF2B79CB1F009F9BBE /* ProfileViewController.swift */,
 				397431B12B79D3BB009F9BBE /* PostViewController.swift */,
 				397431B32B79D597009F9BBE /* InfoViewController.swift */,
+				39E0A72B2B97845F00E78669 /* Post.swift */,
 			);
 			path = popytka1;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				397431B22B79D3BB009F9BBE /* PostViewController.swift in Sources */,
 				3974319E2B79C922009F9BBE /* ViewController.swift in Sources */,
 				3974319A2B79C922009F9BBE /* AppDelegate.swift in Sources */,
+				39E0A72C2B97845F00E78669 /* Post.swift in Sources */,
 				397431B42B79D597009F9BBE /* InfoViewController.swift in Sources */,
 				397431B02B79CB1F009F9BBE /* ProfileViewController.swift in Sources */,
 				397431AE2B79CAF6009F9BBE /* FeedViewController.swift in Sources */,
