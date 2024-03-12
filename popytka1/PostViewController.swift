@@ -7,22 +7,23 @@
 
 import UIKit
 
-class PostViewController: UIViewController {
+final class PostViewController: UIViewController {
     
-  
-    
+    var post: Post?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = post?.author ?? "-"
+        view.backgroundColor = .systemPink
         
-    self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: #selector(buttonPressed(_:)))
+        // add a button in the navigtion bar
+        let barButton = UIBarButtonItem(title: "Info", style: .done, target: self, action: #selector(tapInfoButton))
+        navigationItem.rightBarButtonItem = barButton
+    }
     
-}
-    @objc func buttonPressed(_ sender: UIButton) {
-        let infoViewController = InfoViewController()
-        self.navigationController?.pushViewController(infoViewController, animated: true)
-        
-        
+    @objc func tapInfoButton() {
+        let infoVC = InfoViewController()
+        present(infoVC, animated: true, completion: nil)
     }
 }
-

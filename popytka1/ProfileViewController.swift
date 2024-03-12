@@ -8,13 +8,10 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    let picker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        picker.center = view.center
-        
-        self.view.addSubview(picker)
-    
+       
     }
     
 
