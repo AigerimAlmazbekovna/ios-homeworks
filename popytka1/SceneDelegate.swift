@@ -16,32 +16,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
    
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
+        let loginVC = LoginViewController()
+            let profileNC = UINavigationController(rootViewController: loginVC)
+            profileNC.tabBarItem = UITabBarItem(title: "Profile",
+                                                image: UIImage(systemName: "person.crop.circle"),
+                                                selectedImage: UIImage(systemName: "person.crop.circle.fill"))
+            
+            let feedVC = FeedViewController()
+            let feedNC = UINavigationController(rootViewController: feedVC)
+            feedNC.tabBarItem = UITabBarItem(title: "Feed",
+                                             image: UIImage(systemName: "text.bubble"),
+                                             selectedImage: UIImage(systemName: "text.bubble.fill"))
+
+            let tabBarController = UITabBarController()
+            tabBarController.tabBar.backgroundColor = .white
+            tabBarController.viewControllers = [profileNC, feedNC]
+            
+            // activate main window
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = tabBarController
+            window?.makeKeyAndVisible()
+            
         
-        let feedViewController = UINavigationController(rootViewController: FeedViewController())
-        let profileViewController = UINavigationController(rootViewController: ProfileViewController())
-        
-      
-        
-        let tabBarController = UITabBarController()
-        
-        feedViewController.tabBarItem = UITabBarItem(title: "Лента", image: UIImage(systemName: "doc.richtext"), tag: 0)
-        feedViewController.title = "Лента"
-        feedViewController.view.backgroundColor = .gray
-        
-        profileViewController.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.circle"), tag: 1)
-        profileViewController.title = "Профиль"
-        profileViewController.view.backgroundColor = .lightGray
-        
-        let controllers = [feedViewController, profileViewController]
-        
-        tabBarController.viewControllers = controllers
-        
-    
-    
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
-        
+        }
     }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -72,5 +71,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
-}
 
